@@ -1,5 +1,5 @@
 const electron = require('electron');
-const { app, BrowserWindow } = electron
+const { app, BrowserWindow, Menu } = electron
 
 
 try {
@@ -13,15 +13,15 @@ function createWindow () {
   win = new BrowserWindow({
     resizable: false,
     width: 1280,
-    height: 756,
+    height: 745,
     webPreferences: {
       nodeIntegration: true
     }
   })
 
-  win.loadFile(__dirname + '/index.html')
+  win.loadFile(__dirname + '/index.html');
 
-  // Menu.setApplicationMenu(null);
+  Menu.setApplicationMenu(null);
 }
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {
