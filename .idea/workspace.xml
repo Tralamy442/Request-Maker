@@ -4,11 +4,6 @@
     <list default="true" id="2ad40689-37ee-4ac6-8694-4598d5512183" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media_Request Maker/main.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media_Request Maker/step 2.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media_Request Maker/step 3 Headers.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media_Request Maker/with info.PNG" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +54,7 @@
       <updated>1608442855582</updated>
       <workItem from="1608442857066" duration="67000" />
       <workItem from="1608442932613" duration="114000" />
-      <workItem from="1608478684363" duration="4564000" />
+      <workItem from="1608478684363" duration="4743000" />
     </task>
     <servers />
   </component>
