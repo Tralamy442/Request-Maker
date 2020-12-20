@@ -2,7 +2,7 @@
   "name": "first-app",
   "version": "0.0.1",
   "description": "To Learn Electron",
-  "main": "src/main.js",
+  "main": "src/js/main.js",
   "scripts": {
     "start": "electron ."
   },
