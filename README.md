@@ -14,13 +14,13 @@ Request Maker is a tool to **perform \*\***_Rest API_\***\* request**. It's a De
 
 ## Get request
 
-**1 - **
+**1 -**
 
 In the Url input, insert your request URL .
 
 (Example: <https://weatherbit-v1-mashape.p.rapidapi.com/current>)
 
-![main.PNG](media_Request%20Maker/main.PNG)
+![main.PNG](https://i.imgur.com/cnCiBfy.png)
 
 **2 -**
 
@@ -28,7 +28,7 @@ If you have to, add query by clicking in the + Query button.
 
 (Example: `lon`→ 14.7234 ; `lat`→ -53.224)
 
-![step 2.PNG](media_Request%20Maker/step%202.PNG)
+![step 2.PNG](https://i.imgur.com/9rMMBvW.png)
 
 **3 -**
 
@@ -36,16 +36,15 @@ If you have to, add headers by clicking in the + Header button.
 
 (Example: `x-rapidapi-key`→ <mark>&lt;API KEY></mark>; x-rapidapi-host→ weatherbit-v1-mashape.p.rapidapi.com)
 
-![step 3 Headers.PNG](media_Request%20Maker/step%203%20Headers.PNG)
+![step 3 Headers.PNG](https://i.imgur.com/hHaQiwG.png)
 
 **4 -**
 
 Click the Request button and Voila!
 
-![with info.PNG](media_Request%20Maker/with%20info.PNG)
+![with info.PNG](https://i.imgur.com/iT4rvZY.png)
 
 ## Tricks
-
-!! **Ctrl + Click**on the Query button or the Header button to delete the last Query/Header.
+1. **Ctrl + Click**on the Query button or the Header button to delete the last Query/Header.
 
           
