@@ -180,6 +180,8 @@ function onMenuToggle() {
 }
 
 function onMouseOn(e) {
-    if (!document.querySelector(".mainMenu").contains(e.target))
+    if (!document.querySelector(".mainMenu").contains(e.target)) {
         document.querySelector("#toggle").checked = false;
+        window.removeEventListener('click', onMouseOn, true);
+    }
 }
