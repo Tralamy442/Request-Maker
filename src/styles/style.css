@@ -141,6 +141,48 @@ table {
 }
 
 /* Tralamy code */
+*::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+*::-webkit-scrollbar-button {
+    width: 0px;
+    height: 0px;
+}
+
+*::-webkit-scrollbar-thumb {
+    background: #e1e1e1;
+    border: 0px none #ffffff;
+    border-radius: 50px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background: #ffffff;
+}
+
+*::-webkit-scrollbar-thumb:active {
+    background: #000000;
+}
+
+*::-webkit-scrollbar-track {
+    background: #4bcffa;
+    border: 0px none #ffffff;
+    border-radius: 100px;
+}
+
+*::-webkit-scrollbar-track:hover {
+    background: #000000;
+}
+
+*::-webkit-scrollbar-track:active {
+    background: #07d560;
+}
+
+*::-webkit-scrollbar-corner {
+    background: transparent;
+}
+
 ::selection {
     background-color: #0fbcf9;
     color: white;
@@ -185,7 +227,7 @@ button,
 input,
 select,
 option,
-.label-btn{
+.label-btn {
     outline: 0;
     -webkit-box-shadow: -5px 5px 5px 2px rgba(0, 0, 0, 0.144);
     box-shadow: -5px 5px 5px 2px rgba(0, 0, 0, 0.144);
@@ -197,11 +239,18 @@ select:focus {
     outline: 0;
 }
 
+html {
+    width: 100%;
+    height: 100%;
+}
+
 body {
     display: flex;
     overflow: hidden;
     /* Hide scrollbars */
     font-family: 'Nunito';
+    width: 100%;
+    height: 100%;
 }
 
 button {
@@ -232,37 +281,37 @@ button:active {
 }
 
 .label-btn {
-	display: flex;
-	border-radius: 8px;
-	border: none;
-	justify-content: space-between;
-	background-color: white;
+    display: flex;
+    border-radius: 8px;
+    border: none;
+    justify-content: space-between;
+    background-color: white;
 }
 
 .label-btn i {
-	color: #ff3f34;
+    color: #ff3f34;
 }
 
 .label-btn:hover i {
-	color: #0fbcf9;
+    color: #0fbcf9;
 }
 
 .label-btn:active i {
-	color: #05c46b;
+    color: #05c46b;
 }
 
 .label-btn:hover {
-	border: 1px #0fbcf9 solid;
+    border: 1px #0fbcf9 solid;
 }
 
 .label-btn:active {
-	border: 1px #05c46b solid;
+    border: 1px #05c46b solid;
 }
 
 .main {
     display: flex;
-    width: 415px;
-    height: 720px;
+    min-width: 415px;
+    height: 100%;
     background-color: #B2BEC3;
     text-align: center;
     flex-direction: column;
@@ -270,7 +319,7 @@ button:active {
 }
 
 .main .title {
-    width: 100%;
+    min-width: 100%;
     height: 75px;
 
     font-weight: 600;
@@ -283,7 +332,7 @@ button:active {
 }
 
 .result {
-    width: 865px;
+    width: calc(100% - 415px);
     background: #636E72;
     display: flex;
     align-items: center;
@@ -294,8 +343,8 @@ button:active {
     overflow: hidden;
     display: inline-block;
     background-color: #DFE6E9;
-    width: 820px;
-    height: 675px;
+    width: 95%;
+    height: 94%;
     border-radius: 8px;
     justify-content: center;
     align-items: center;
@@ -305,11 +354,20 @@ button:active {
 
 .resultText {
     overflow: auto;
-    /* width: 816px; */
-    height: 675px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.resultText code {
+#finalResult {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    font-family: "Nunito";
+    font-size: 14px;
     background-color: rgba(0, 0, 0, 0);
 }
 
@@ -351,13 +409,13 @@ input {
     color: #0fbcf9;
     width: 299px;
 
-    font-size: 22px;
+    font-size: 18px;
 }
 
 input::placeholder {
     color: #B2BEC3;
 
-    font-size: 22px;
+    font-size: 18px;
     line-height: 42px;
     text-align: start;
 }
@@ -365,9 +423,6 @@ input::placeholder {
 .combobox {
     width: 83px;
     font-size: 22px;
-}
-
-.combobox {
     text-align: center;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -402,21 +457,10 @@ input:focus,
     border: 1px #05c46b solid;
 }
 
-#finalResult {
-    position: absolute;
-    left: 434px;
-    top: 23px;
-    width: 820px;
-    height: 675px;
-    border-radius: 8px;
-    font-family: Nunito;
-    font-size: 14px;
-}
-
 .add-btn {
     width: 194px;
     height: 42px;
-    font-family: Nunito;
+    font-family: "Nunito";
     font-weight: 300;
     font-size: 24px;
     line-height: 42px;
@@ -427,61 +471,7 @@ input:focus,
 }
 
 .add-btn i {
-    margin-right: 10.67px;
-}
-
-/* .add-btn i {
-	margin-left: auto;
-	margin-right: 15px;
-	padding: 0;
-}
-
-.add-btn p {
-	margin-left: auto;
-	text-align: center;
-} */
-
-
-.paramMain::-webkit-scrollbar {
-    width: 5px;
-    height: 5px;
-}
-
-.paramMain::-webkit-scrollbar-button {
-    width: 0px;
-    height: 0px;
-}
-
-.paramMain::-webkit-scrollbar-thumb {
-    background: #e1e1e1;
-    border: 0px none #ffffff;
-    border-radius: 50px;
-}
-
-.paramMain::-webkit-scrollbar-thumb:hover {
-    background: #ffffff;
-}
-
-.paramMain::-webkit-scrollbar-thumb:active {
-    background: #000000;
-}
-
-.paramMain::-webkit-scrollbar-track {
-    background: #4bcffa;
-    border: 0px none #ffffff;
-    border-radius: 100px;
-}
-
-.paramMain::-webkit-scrollbar-track:hover {
-    background: #000000;
-}
-
-.paramMain::-webkit-scrollbar-track:active {
-    background: #07d560;
-}
-
-.paramMain::-webkit-scrollbar-corner {
-    background: transparent;
+    margin-right: 11px;
 }
 
 .paramMain {
@@ -495,7 +485,7 @@ input:focus,
 }
 
 .param {
-    width: 382px;
+    width: 92%;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -506,6 +496,7 @@ input:focus,
 .param-main {
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .query {
@@ -528,12 +519,14 @@ input:focus,
 .addValue {
     width: 98px;
 }
+
 .mainMenu {
+    overflow: auto;
     position: absolute;
     background-color: #D2DAE2;
     width: 75px;
-    height: 710px;
-    top: 5px;
+    height: 691px;
+    top: 14.5px;
     left: -75px;
     z-index: 2;
     border-radius: 10px;
@@ -546,8 +539,8 @@ input:focus,
 }
 
 .mainMenu-btn {
-    width: 55px;
-    height: 55px;
+    min-width: 55px;
+    min-height: 55px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -559,14 +552,16 @@ input:focus,
 .mainMenu-btn:first-child {
     margin-top: 8px;
 }
+
 .mainMenu-btn:not(:first-child):not(:last-child) {
-	margin-top: 10px;
+    margin-top: 10px;
 }
 
 .mainMenu-btn:last-child {
     margin-top: auto;
     margin-bottom: 8px;
 }
+
 .toggle:checked ~ .mainMenu {
     left: 8px;
     pointer-events: all;
@@ -575,11 +570,94 @@ input:focus,
 }
 
 .visually-hidden {
-	position: absolute;
-	left: -100vw;
+    position: absolute;
+    left: -100vw;
 }
+
 .toggle-menu {
     position: absolute;
     top: 5px;
     left: 10px;
+}
+
+@media (max-height: 719px) {
+    .mainMenu {
+        height: 96%;
+        top: 2%;
+    }
+}
+
+@media (max-width: 1000px) {
+    #finalResult {
+        font-size: 12px;
+    }
+
+    .main {
+        min-width: 0;
+        width: 300px;
+        max-width: 415px;
+    }
+
+    .result {
+        width: calc(100% - 260px);
+    }
+
+    input::placeholder {
+        font-size: 12px;
+    }
+
+    .combobox {
+        width: 50px;
+    }
+
+    .request-btn {
+        width: 266px;
+    }
+
+    .combobox,
+    input,
+    button:not(.mainMenu-btn) {
+        height: 30px;
+        font-size: 18px;
+        line-height: 30px;
+    }
+
+    .mainMenu-btn:first-child {
+        margin-top: 13px;
+    }
+
+    .combobox {
+        font-size: 15px;
+    }
+
+    .mainMenu-btn {
+        min-width: 35px;
+        min-height: 35px;
+    }
+
+    .mainMenu {
+        width: 47px;
+    }
+
+    input {
+        width: 214px;
+        font-size: 14px;
+    }
+
+    .main .title {
+        font-size: 28px;
+        height: 60px;
+    }
+
+    .add-btn {
+        width: calc(266px / 2);
+    }
+
+    .addKey {
+        width: 39px;
+    }
+
+    .addValue {
+        width: 83px;
+    }
 }

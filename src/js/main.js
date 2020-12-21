@@ -10,9 +10,9 @@ app.on('ready', createWindow);
 var win;
 function createWindow () {
   win = new BrowserWindow({
-    resizable: false,
-    width: 1280,
-    height: 746,
+    resizable: true,
+    width: 650,
+    height:450,
     webPreferences: {
       nodeIntegration: true
     }
@@ -20,7 +20,7 @@ function createWindow () {
 
   win.loadFile('src/html/index.html');
 
-  // Menu.setApplicationMenu(null);
+  Menu.setApplicationMenu(null);
 }
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {
