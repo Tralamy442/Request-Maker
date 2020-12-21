@@ -1,5 +1,5 @@
 const electron = require('electron');
-const { app, BrowserWindow, Menu } = electron
+const { app, BrowserWindow, Menu, ipcMain } = electron
 
 
 try {
@@ -8,7 +8,6 @@ try {
 
 app.on('ready', createWindow);
 var win;
-exports = win;
 function createWindow () {
   win = new BrowserWindow({
     resizable: false,
@@ -21,7 +20,7 @@ function createWindow () {
 
   win.loadFile('src/html/index.html');
 
-  Menu.setApplicationMenu(null);
+  // Menu.setApplicationMenu(null);
 }
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {
@@ -34,3 +33,8 @@ app.on('activate', () => {
     createWindow()
   }
 })
+
+/* Listener */
+ipcMain.on('reload', () => {
+  win.reload();
+});
